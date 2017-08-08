@@ -1,0 +1,6 @@
+_site/
+.sass-cache/
+.jekyll-metadata
+.sass-cache/
+*.css.map
+.idea/
