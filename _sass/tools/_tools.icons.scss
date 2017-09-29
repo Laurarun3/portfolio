@@ -1,0 +1,20 @@
+@mixin icons($ico_code, $color) {
+    &:before {
+        font-family: 'icomoon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: $ico_code;
+        color: $color;
+    }
+}
+
+// Download icon
+// @include icons('\e900', red);

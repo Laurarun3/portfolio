@@ -1,0 +1,53 @@
+@mixin liststyle_arrow() {
+    position: relative;
+    padding-left: 40px;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        width: 30px;
+        height: 30px;
+        left: 0;
+        top: -5px;
+        border-radius: 50%;
+        border: solid 2px $btn-border-primary;
+        background-color: $white;
+    }
+    &:after {
+        @include arrow(8px, 0.18em, $theme-color-4, face-right, block, $top:6px, $left:9px);
+        margin-right: 0.5em;
+    }
+}
+
+@mixin liststyle_download() {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 22px;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        left: 0;
+        top: -3px;
+    }
+    @include icons('\e900', $theme-color-5);
+}
+
+@mixin liststyle_usp() {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 22px;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        left: 0;
+        top: -3px;
+    }
+    @include icons('\e902', $check-color);
+}
+
+//@include liststyle_arrow();

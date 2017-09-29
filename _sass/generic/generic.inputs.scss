@@ -1,0 +1,30 @@
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+    &--error {
+        input {
+            border: 1px solid red;
+        }
+        &:after {
+            position: absolute;
+            right: 25px;
+            content: "X";
+            font-size: 20px;
+            color: RED;
+        }
+    }
+    &--feedback {}
+    &--success {
+        input {
+            border: 1px solid green;
+        }
+    }
+    .control-label {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .form-control {
+        width: 100%;
+        display: block;
+    }
+}

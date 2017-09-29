@@ -1,0 +1,51 @@
+---
+---
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Global variables, site-wide settings, config switches, etc.
+ *
+ * TOOLS
+ * Mixins...............Site-wide mixins and functions.
+ *
+ * GENERIC..............Low-specificity, far-reaching rulesets (e.g. resets).
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............Unclassed HTML elements (e.g. a {}, blockquote {}, address {}). H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Objects, abstractions, and design patterns (e.g. .media {}).
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
+ */
+
+// Settings
+@import '../_sass/settings/all';
+
+// Tools (mixins/functions)
+@import '../_sass/tools/all';
+
+// Generic
+@import '../_sass/generic/all';
+
+// Base (Type selectors)
+@import '../_sass/base/all';
+
+// Objects (Cosmetic-free design patterns)
+@import '../_sass/objects/all';
+
+// Components (Designed components, chunks of UI)
+@import '../_sass/components/all';
+
+// Trumps (Helpers and overrides)
+@import '../_sass/trump/all';

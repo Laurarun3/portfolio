@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: none;
+}
+
+body,
+html {
+    margin: 0;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    background: #fff;
+    overflow-x: hidden;
+    font-family: $font-stack;
+    font-size: $font-size-base;
+    color: $font-color;
+    //font-family: $font-stack;
+    //font-size: $font-size-base;
+    //color: $font-color;
+    &.no-scroll {
+        -webkit-overflow-scrolling: auto;
+        overflow: hidden;
+    }
+}
+
+/**
+ * These values will not show up in content, but can be
+ * queried by JavaScript to know which breakpoint is active.
+ * https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+ */
+
+body {
+    &:before {
+        content: "xs";
+        display: none;
+        /* Prevent from displaying. */
+        @include media('>=tablet') {
+            content: "sm";
+        }
+        @include media('>=desktop') {
+            content: "md";
+        }
+        @include media('>=wide-screens') {
+            content: "lg";
+        }
+    }
+}

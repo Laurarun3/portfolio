@@ -1,0 +1,52 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+    .popup {
+        margin: 70px auto;
+        padding: 30px;
+        background: #fff;
+        width: 550px;
+        position: relative;
+        z-index: 3;
+        & > h2 {
+            margin-right: 30px;
+        }
+        .form-row {
+            margin-top: 30px;
+        }
+        .button {
+            margin-top: 30px;
+        }
+        @include media('<=tablet') {
+            width: 90%;
+            .button {
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .popup-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        &:before {
+            content: 'X';
+            font-size: 28px;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
